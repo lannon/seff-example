@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Conversion Therapy</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script type="text/javascript">
+      function calculate() { 
+        var lbs = document.getElementById('lbs').value;
+        var conversionFactor = 0.453592;
+        var result = parseFloat(lbs)  * conversionFactor;
+        document.getElementById('result').innerText = lbs + "lbs = " + result + "kg";
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Exercise 2</h1>
+    <p>
+     Build a conversion tool that converts user input to another type and displays it (ex: converts cups to grams)
+    </p>
+    <form id="inputs">
+      <input type="number" id="lbs" value="2"></input>
+      <br />
+      <button type="button" id="calculate" onClick="window.calculate()">Calculate</button>
+    </form>
+    <p id="result" style="color: blue; font-size: 2em;"></p>
+  </body>
+</html>

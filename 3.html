@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Conversion Therapy</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  </head>
+  <body>
+    <h1>Exercise 3</h1>
+    <p>
+      Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)
+    </p>
+    <p>
+      It's an undisputed fact that the world when end at the strike of midnight on 2000-01-01.
+    </p>
+      
+    <p id="result" style="color: blue; font-size: 2em;"></p>
+
+    <script type="text/javascript">
+      const doomsDay = new Date('2000-01-01');
+      const now = new Date();
+
+      const msLeft = doomsDay - now;
+      const daysLeft = Math.round((msLeft / (60*60*24*1000)));
+
+      document.getElementById('result').innerText = "You have " + daysLeft + " days left to live";
+
+    </script>
+  </body>
+</html>

@@ -1,113 +1,16 @@
 <html>
-<head>
-    <style type="text/css">
-        body {
-            font: 14px Verdana, Geneva, sans-serif;
-            height: 500px;
-            width: 700px;
-            margin: 10px 20px;
-        }
+  <head>
+    <title>The Title</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  </head>
+  <body>
+    <h1>Exercises</h1>
+    <ol>
+      <li><a href="1.html">Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value</a></li>
+      <li><a href="2.html">Build a conversion tool that converts user input to another type and displays it (ex: converts cups to grams)</a></i>
+      <li><a href="3.html">Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)</a></li>
+      <li><a href="4.html">Persist a thing</a></li>
+    </ol>
+  </body>
 
-        h1 {
-            color: #fff;
-            text-shadow: 0 -1px 1px #000;
-            margin: 0;
-        }
-
-        h2 {
-            font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif;
-        }
-
-        a {
-            color: #2D6997;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #000;
-        }
-
-        input[type="text"], textarea {
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0;
-            padding: 3px 6px;
-            outline-width: 0;
-            border: 2px solid #ddd;
-            width: 100%;
-        }
-
-        input[type="text"]:hover, textarea:hover {
-            border-color: #bbb;
-        }
-
-        input[type="text"]:focus, textarea:focus {
-            border-color: #007934;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        h2 {
-            color: #222;
-            margin: 0;
-            padding: 0;
-            text-shadow: 0 1px 0 #fff;
-        }
-
-        p {
-            margin: 5px 0;
-        }
-
-        .hint {
-            font-size: 12px;
-        }
-
-        .none {
-            display: none;
-        }
-
-        label, .hint {
-            display: block;
-        }
-
-        .file {
-            margin-bottom: 15px;
-        }
-    </style>
-    <script type="text/javascript" src="jquery.js"></script>
-</head>
-<body>
-<form method="POST" action="https://gist.github.com/gists">
-    <div id="files">
-        <div class="file">
-            <label for="file_name[gistfile1]">Name [1]</label>
-            <input type="text" id="file_name[gistfile1]" name="file_name[gistfile1]" class="fileName" /><br/>
-            <label for="file_ext[gistfile1]">Type [1]</label>
-            <input type="text" id="file_ext[gistfile1]" name="file_ext[gistfile1]" class="fileType" /><br/>
-            <label for="file_contents[gistfile1]">Contents [1]</label>
-            <textarea rows="5" cols="70" id="file_contents[gistfile1]" name="file_contents[gistfile1]"></textarea>
-        </div>
-    </div>
-    <input type="hidden" name="login" value="dawsontoth" />
-    <input type="hidden" name="token" value="**INSERT TOKEN HERE**" />
-    <input type="button" id="AddAnotherFile" value="Add Another File"/>
-    <input type="submit" id="CreateGist" value="Create Gist"/>
-</form>
-<script type="text/javascript">
-    $('#AddAnotherFile').click(function() {
-        var clone = $('#files .file').first().clone();
-        clone.html(clone.html().split('[1]').join('[' + ($('#files .file').length + 1) + ']'))
-        clone.appendTo($('#files'));
-    });
-    $('.fileName').change(function(evt) {
-        var name = $(this), type = name.parent().find('.fileType');
-        if (!type.val().length && name.val().split('.').length) {
-            type.val(name.val().split('.').pop());
-        }
-    });
-</script>
-</body>
 </html>

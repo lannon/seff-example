@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Conversion Therapy</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script type="text/javascript">
+      function calculate() { 
+        var arg1 = document.getElementById('arg1').value;
+        var arg2 = document.getElementById('arg2').value;
+        var result = parseFloat(arg1)  * parseFloat(arg2);
+        document.getElementById('result').innerText = "Result: " + result ;
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Exercise 1</h1>
+    A
+    <p>
+      Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value.
+    </p>
+    <form id="inputs">
+      <input type="arg1" id="arg1" value="2"></input>
+      <input type="arg2" id="arg2" value="2"></input>
+      <br />
+      <button type="button" id="calculate" onClick="window.calculate()">Calculate</button>
+    </form>
+    <p id="result" style="color: blue; font-size: 2em;"></p>
+  </body>
+</html>
